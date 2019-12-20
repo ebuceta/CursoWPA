@@ -187,7 +187,24 @@ color: white;
 	line-height: 206px;
 	}
 }
+/* Cuando la pantalla es máximo de 890 pixeles */
+@media all and (max-width: 890px)
+{
+	.service, .video
+	{
+	width: 70%;
+	float: none;
+	margin: 0px auto;
+	margin-top: 20px;
+	margin-bottom: 20px;	
+	}
+	.video iframe{
+	width: 80%;
+	height: 300px;
+}
+}
 
+/* Cuando la pantalla es máximo de 640 pixeles */
 @media all and (max-width: 640px)
 {
 	#slider
@@ -199,7 +216,7 @@ color: white;
     line-height: 174px;
 	}
 }
-
+/* Cuando la pantalla es máximo de 480 pixeles */
 @media all and (max-width: 480px){
 	#slider
 	{
@@ -217,14 +234,12 @@ color: white;
 		height: auto;
 		line-height: 65px;
 	}
-
 	#menu
 	{
 		width: 100px;
 		float: none;
 		margin: 0px auto;
 	}
-
 	#menu ul li
 	{
 		float: none;
@@ -233,12 +248,10 @@ color: white;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
-	
 	#slider
 	{
 		height: 90px;
 	}
-	
 	#slider h2 
 	{
 	    line-height: 39px;
