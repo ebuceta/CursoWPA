@@ -168,7 +168,7 @@ color: white;
 {
 	#logo
 	{
-		width: 218px;
+		width: 214px;
 		float: none;
 		margin: 0px auto;
 	}
@@ -198,6 +198,14 @@ color: white;
 	margin-top: 20px;
 	margin-bottom: 20px;	
 	}
+	.video
+	{
+	width: 95%;
+	float: none;
+	margin: 0px auto;
+	margin-top: 20px;
+	margin-bottom: 20px;	
+	}
 	.video iframe{
 	width: 80%;
 	height: 300px;
@@ -214,6 +222,14 @@ color: white;
 	#slider h2 {
     font-size: 22px;
     line-height: 174px;
+	}
+	.service, .video
+	{
+	width: 95%;
+	}
+	.video iframe{
+	width: 80%;
+	height: 300px;
 	}
 }
 /* Cuando la pantalla es máximo de 480 pixeles */
