@@ -5,31 +5,37 @@
 	text-decoration: none;
 	font-family: 'Open Sans', verdana;
 }
-body{
+body
+{
 	background: white;
 }
-.clearfix{
+.clearfix
+{
 	clear: both;
 	float: none;
 }
-.container{
+.container
+{
 	width: 95%;
 	margin: 0px auto; /*Esto es para centrar un bloque*/
 }
 
 /*Estilos de la Cabecera*/
-#main-header{
+#main-header
+{
 	background: white;
 	height: 100px;
 	line-height: 85px;
 }
 /*Estilos del logotipo*/
-#logo{
+#logo
+{
 		width: 65%;
 		float: left;
 }
 /*Estilo de las letras del logotipo*/
-#logo h1{
+#logo h1
+{
 	font-weight: bold;
 	font-size: 25px;
 	color: #FB314E;
@@ -148,7 +154,8 @@ color: white;
 
 
 /* Cuando la pantalla es máximo de 1130 pixeles */
-@media all and (max-width: 1130px){
+@media all and (max-width: 1130px)
+{
 	#logo
 	{
 		width: 60%;
@@ -157,7 +164,8 @@ color: white;
 }
 
 /* Cuando la pantalla es máximo de 990 pixeles */
-@media all and (max-width: 990px){
+@media all and (max-width: 990px)
+{
 	#logo
 	{
 		width: 218px;
@@ -169,17 +177,19 @@ color: white;
 		float: none;
 		margin: 0px auto;
 	}
-	
 	#slider
 	{
-	height: 220px;
+		height: 220px;
 	}
-#slider h2 {
+	#slider h2 
+	{
     font-size: 30px;
-    line-height: 206px;
+	line-height: 206px;
+	}
 }
 
-@media all and (max-width: 640px){
+@media all and (max-width: 640px)
+{
 	#slider
 	{
 	height: 180px;
@@ -210,9 +220,9 @@ color: white;
 
 	#menu
 	{
-	width: 100px;
-	float: none;
-	margin: 0px auto;
+		width: 100px;
+		float: none;
+		margin: 0px auto;
 	}
 
 	#menu ul li
@@ -226,12 +236,11 @@ color: white;
 	
 	#slider
 	{
-	height: 90px;
+		height: 90px;
 	}
 	
 	#slider h2 
 	{
-
-    line-height: 39px;
+	    line-height: 39px;
 	}
-	}
+}
