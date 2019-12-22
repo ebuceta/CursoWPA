@@ -2,16 +2,35 @@
 <html lang="es">
 <head>
 	<!-- Codificación de caracteres-->
-	<meta charset="utf-8">
+	<meta charset="utf-8"/>
 	<!-- Titulo de la Pagina Web-->
 	<title>Big IT México S.A de C.V.</title>
 	<!-- Configuración del Viewport Responsive-->
-	<meta name="Viewport" content="width=device-with, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
+	<meta name="Viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<!-- Icono de la web -->
 	<link rel="shorcut icon" type="image/phg" href="img/favicon.png" />
+	<!-- Color de la Aplicación -->
+	<meta name="theme-color" content="#FB314E"/>
+	<!-- OPTIMIZACIÓN PARA EL MÓVIL -->
+	<meta name="MobileOptimized" content="width"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<!-- META ETIQUETAS PARA DISPOSITIVOS APPLE -->
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<link rel="apple-touch-icon" href="img/favicon.png"/>
+	<link rel="apple-touch-stratup-image" href="img/favicon.png"/>
+	<!-- CONFIGURACION GENERAL WPA (MANIFIESTO) -->
+	<link rel="manifest" href="manifest.json"/>
+
+
+
+
 	<!--Hoja de Estilo-->
 	<link rel="stylesheet" href="css/styles.css" />
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- SCRIPT -->
+	<Script src="main.js"></Script>
 </head>
 <body>
 <header id="main-header">
@@ -22,22 +41,22 @@
 		<div id="menu">
 			<ul>
 				<li>
-					<a href="#">
+					<a href="#main-header">
 						Inicio
 					</a>	
 				</li>
 				<li>
-					<a href="#">
+					<a href="#services">
 						Servicios
 					</a>	
 				</li>
 				<li>
-					<a href="#">
+					<a href="#videos">
 						Videos
 					</a>	
 				</li>
 				<li>
-					<a href="#">
+					<a href="#footer">
 						Contacto
 					</a>	
 				</li>
@@ -90,7 +109,7 @@
 				Videos
 			</h2>
 			<div class="video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/Q8_G3XhumfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; download" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Q8_G3XhumfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<p>
 				El ataque al rey enemigo es uno de los principales elementos de la partida. Si quieres ganar al ajedrez necesitas aprender a atacar. El método que propone Luisón te dará las claves para saber cuándo puede funcionar un ataque y qué detalles pueden ser importantes.
 				</p>
