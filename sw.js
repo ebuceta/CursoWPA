@@ -32,14 +32,20 @@ var urlsToCache = [
 //Evento de Installación
 self.addEventListener('install', e =>
  {
-    e.waitUntil(
-        caches.open(CACHE_NAME).then(cache => 
-            cache.addAll(urlsToCache).then(() => {
-            self.skipWaiting();
-        })).catch(err => 
+    e.waitUntil(caches.open(CACHE_NAME)
+        .then(cache => 
+            {
+                console.log('Cache Abierta');
+                return cache.addAll(urlsToCache)
+                .then(() => 
                 {
-                    console.log('No se a registrado el cache', err);
-                }));
+                    self.skipWaiting();
+                });
+            })
+        .catch(err => 
+            {
+                console.log('No se a registrado el cache', err);
+            }));
 });
 
 //Evento de Activación
@@ -48,32 +54,37 @@ self.addEventListener('install', e =>
 self.addEventListener('activate', e => 
     {
         const cacheWhitelist = [CACHE_NAME];
-        e.waitUntil(caches.keys().then(cacheNames => 
-            {
-                return Promise.all(cacheNames.map(cacheName =>
-                    {
-                        if (cacheWhitelist.indexOf(cacheName) === -1)
-                            {
-                                //Borrar elementos innecesarios
-                                return caches.delete(cacheName);
-                            }
-                    }));
-            }).then(() => 
+        e.waitUntil(caches.keys()
+            .then(cacheNames => 
                 {
-                    self.clients.claim();
+                    return Promise.all(cacheNames.map(cacheName => 
+                        {
+                            if (cacheWhitelist.indexOf(cacheName) === -1) 
+                            {
+                            //Borrar elementos innecesarios
+                            console.log('Borrando Elementos innecesarios')
+                            return caches.delete(cacheName);
+                            }
+                        }));
+                })
+            .then(() => 
+                {
+                self.clients.claim();
                 }));
-    });
+ });
+
 
 //Evento Fech
 self.addEventListener('fetch', e =>
     {
-        e.respondWith(caches.match(e.request).then(respons => 
-            {
-                if(respons)
-                    {
-                        //Devuelvo datos desde Cache
-                        return respons;
-                    }
+        e.respondWith(caches.match(e.request)
+            .then(respons => 
+                {
+                    if(respons)
+                        {
+                            //Devuelvo datos desde Cache
+                            return respons;
+                        }
                 return fetch(e.request);
-          }));
+                }));
     });
